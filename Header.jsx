@@ -4,6 +4,8 @@ import Support from "../assets/Support.png";
 import Report from "../assets/Report.png";
 import Profile from "../assets/Profile.png";
 import Setting from "../assets/Setting.png";
+import Dropdown from "./Dropdown";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -34,16 +36,20 @@ function Header() {
   return (
     <main className="flex justify-between items-center px-3 lg:px-14 py-10 h-[8vh] lg:py-10">
       <div className="">
-        <img src={Logo} alt="" className="w-40 h-15" />
+        <Link to="/">
+          <img src={Logo} alt="" className="w-40 h-15" />
+        </Link>
       </div>
       <div className="flex justify-between gap-6">
         <div className="flex justify-between items-center gap-6 font-semibold text-slate-700">
           <h2 className="hidden md:block">{timeString}</h2>
           <h2 className="hidden md:block">{dateString}</h2>
           <div className="md:flex gap-3 hidden">
-            <img src={Support} alt="" className="w-6 h-6" />
+
+            <Dropdown iconSrc={Support} altText="Support" />
+
             <img src={Report} alt="" className="w-6 h-6" />
-            <img src={Setting} alt="" className="w-6 h-6"/>
+            <img src={Setting} alt="" className="w-6 h-6" />
           </div>
         </div>
 

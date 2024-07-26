@@ -8,11 +8,12 @@
       position: fixed;
       top: 0;
       left: -100%;
-      z-index: 9;
+      z-index: 10;
       /* background-color: #ccafaf; */
-      color: white;
+      color: black;
       transition: left 0.3s ease-in-out; /* Added transition */
-      background: linear-gradient(135deg, #00b1f7 0%, #e88c3f 100%);
+      background:white;
+      box-shadow:5px gray;
     }
   
     .sidebar_content.show {
@@ -20,6 +21,6 @@
     }
   }
   
-  .txt_color {
+  /* .txt_color {
     color: #e88c3f;
-  }
+  } */
